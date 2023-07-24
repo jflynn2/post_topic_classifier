@@ -237,7 +237,7 @@ if __name__ == "__main__":
     dynamic_date = today.strftime("%b_%d_%Y")
     # posts = pd.read_csv("topic_outputs/davinci-turbo/n=1000/topics_posts_df.csv")['text'].iloc[750:752]
     # posts = select_random_posts_classify(n=100, model_name='gpt-3.5-turbo')
-    posts = select_recent_posts(2)
+    posts = select_recent_posts(4)
     os.makedirs('topic_outputs/' + dynamic_date + '', exist_ok=True)
     posts.to_csv('topic_outputs/' + dynamic_date + '/save_posts.csv', index=False)
 
